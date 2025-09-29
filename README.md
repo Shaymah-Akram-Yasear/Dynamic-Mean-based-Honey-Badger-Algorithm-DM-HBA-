@@ -1,11 +1,6 @@
 # Dynamic Mean-based Honey Badger Algorithm (DM-HBA)
 
-This repository implements the **Dynamic Mean-based Honey Badger Algorithm (DM-HBA)**, a novel metaheuristic optimization algorithm inspired by the foraging behavior of honey badgers, enhanced with dynamic mean-based guidance and adaptive control parameters.
-
-## 📌 Features
-- Dynamic beta adaptation for exploration-exploitation balance
-- Mean-based guidance mechanism for improved convergence
-- Compatible with standard benchmark functions (e.g., CEC, Sphere, Rastrigin)
+This repository implements the **Dynamic Mean-based Honey Badger Algorithm (DM-HBA)**
 
 ## 🚀 Usage
 
