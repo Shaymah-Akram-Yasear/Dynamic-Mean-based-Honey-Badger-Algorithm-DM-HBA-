@@ -21,7 +21,7 @@ for iter = 1:MaxGen
     alpha=C*exp(-iter/MaxGen);   
     I=Intensity(N,Xprey,X);  
     % Dynamic beta
-    beta = 6 * (1 - exp(-lambda * iter / MaxGen)); % Eq. (8)
+    beta = 6 * (1 - exp(-lambda * iter / MaxGen)); % Eq. (9)
     for i=1:N
         Xm = mean(X,1);
         di = Xprey - X(i,:); % direction toward best prey
@@ -31,7 +31,7 @@ for iter = 1:MaxGen
             if r< 0.5
                 r3=rand;                r4=rand;                r5=rand;
                 % mean-based guidence
-                Xnew(i,j) = Xm(j) + F * beta * I(i) * Xm(j) + F * r3 * alpha* di(j) * abs(cos(2* pi * r4) * (1-cos(2 * pi * r5))); % Eq. (9)
+                Xnew(i,j) = Xm(j) + F * beta * I(i) * Xm(j) + F * r3 * alpha* di(j) * abs(cos(2* pi * r4) * (1-cos(2 * pi * r5))); % Eq. (11)
             else
                 r7=rand;
                 Xnew(i,j) = Xprey(j) + F * r7 * alpha * di(j);
@@ -84,3 +84,4 @@ if size(up,2)>1
     end
 end
 end
+
